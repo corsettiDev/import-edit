@@ -1,0 +1,29 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+support.greenshield.ca	TRUE	/SupportCentre	FALSE	1999999999	.AspNetCore.Antiforgery.8tTAoWgPeOc	CfDJ8KmnGSmbwWdHv-MA0soYgESm6bJIA0JZZZJsWRpKlbiMWIgrLoBlBH0JK7k71TVpD_cNloP8JIFIT7ziGTp609LZ4tcdMmXowU8ajRbGdtSmDv1-cHQ2ZyzItK2q5cWNkvRV45RjwqKX0lTsylbu3Bs
+onlineservices.greenshield.ca	TRUE	/	FALSE	1999999999	ASP.NET_SessionId	pnnqx1i3h20xxqfem5b044z0
+onlineservices.greenshield.ca	TRUE	/	FALSE	1999999999	SameSite	Lax
+www.linkedin.com	TRUE	/	FALSE	1999999999	JSESSIONID	ajax:3249134134979662938
+.www.linkedin.com	TRUE	/	FALSE	1999999999	SameSite	None
+www.linkedin.com	TRUE	/	FALSE	1999999999	lang	v=2&lang=en-us
+.linkedin.com	TRUE	/	FALSE	1999999999	lidc	b=OGST03:s=O:r=O:a=O:p=O:g=3152:u=1:x=1:i=1709663115:t=1709749515:v=2:sig=AQE41aZGmW0mFGfm7toG1QojcwbmgNSw"
+.facebook.com	TRUE	/	FALSE	1999999999	ps_l	0
+.facebook.com	TRUE	/	FALSE	1999999999	ps_n	0
+facebook.com	TRUE	/	FALSE	1999999999	SameSite	deleted
+www.facebook.com	TRUE	/	FALSE	1999999999	SameSite	deleted
+.greenshield.ca	TRUE	/	FALSE	1999999999	dtCookie	v_4_srv_7_sn_57D8FFC39D6BAB99693FB52E54F80AD2_perc_100000_ol_0_mul_1_app-3Afc86bf1a94959539_1_app-3Aea7c4b59f27d43eb_1_rcs-3Acss_0
+support.greenshield.ca	TRUE	/	FALSE	1999999999	.AspNetCore.Culture	c%3Dfr-CA%7Cuic%3Dfr-CA
+.linkedin.com	TRUE	/	FALSE	1999999999	bcookie	v=2&8677fa7b-6d42-4206-8c3a-cce1359d6ae5"
+.www.linkedin.com	TRUE	/	FALSE	1999999999	bscookie	v=1&202403051836058c621bd7-669c-44e5-82ba-7670c5537681AQHNrnn9X8HC-ms4t28ExqAX3XRo6Gp4"
+www.linkedin.com	TRUE	/	FALSE	1999999999	SameSite	None
+.twitter.com	TRUE	/	FALSE	1999999999	guest_id_marketing	v1%3A170966376632674377
+.twitter.com	TRUE	/	FALSE	1999999999	guest_id_ads	v1%3A170966376632674377
+.twitter.com	TRUE	/	FALSE	1999999999	personalization_id	v1_srmQBoxVygq1T54Hp8dgyw=="
+.twitter.com	TRUE	/	FALSE	1999999999	guest_id	v1%3A170966376632674377
+twitter.com	TRUE	/	FALSE	1999999999	SameSite	None
+.twitter.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+support.greenshield.ca	TRUE	/	FALSE	1999999999	samesite	strict
+.greenshield.ca	TRUE	/	FALSE	1999999999	LastNPages	AM15|AM15|AM15
+.greenshield.ca	TRUE	/	FALSE	1999999999	appl	OA
+.greenshield.ca	TRUE	/	FALSE	1999999999	lang	en-CA
+

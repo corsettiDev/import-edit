@@ -1,0 +1,630 @@
+﻿var textSizeCookieName = 'text-size=';
+var textSizeArr = [0.8, 1.0, 1.3, 1.7, 2.0];
+var resizeTimeout;
+var currentTextSize = 0;
+var style = (function () {
+    // Create the <style> tag
+    var style = document.createElement("style");
+
+    // WebKit hack
+    style.appendChild(document.createTextNode(""));
+
+    // Add the <style> element to the page
+    document.head.appendChild(style);
+
+    console.log(style.sheet.cssRules); // length is 0, and no rules
+
+    return style;
+})();
+
+var tabIndex = 10;
+var lastTabIndex = -1;
+var searchFdbkSbmtBtnTabIndex = -1;
+var firstFocusableElement;
+var lastFocusableElement;
+var focusableContent;
+
+
+
+$(document).ready(function () {
+
+    /*Disable bootstrap tooltips on IE*/
+    var browser = get_browser();
+    if (browser.name != "IE") {
+        $('.page-item').tooltip({
+            template: '<div class="tooltip font-resize"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+        });
+        $('[data-toggle="tooltip"]').tooltip();
+    }
+
+    var links = $('.nav-list-link');
+    var topicTitle = $('#topic-title-lbl');
+    if (topicTitle && topicTitle[0] && topicTitle[0].attributes && topicTitle[0].attributes.topic_identifier)
+    {
+        var topicIdentifier = topicTitle[0].attributes.topic_identifier.nodeValue;
+        if (topicIdentifier) {
+            for (var i = 0; i < links.length; i++) {
+                if (links[i].attributes.topic_identifier.nodeValue == topicIdentifier) {
+                    links[i].classList.add('nav-list-link-active');
+                    links[i].setAttribute("aria-current", "true");
+                }
+            }
+        }
+    }
+
+    /* TODO - proper fix for textbox and search close event handlers*/
+    var topic = $('.topic-search-txt-sm');
+    topic[1].onclick = function () {
+        $('.search-sm-btns').show();
+        $('#topic-list-btn').hide();
+        $('#topic-title-mobile').addClass('invisible');
+    }
+
+    var searchClose = $('.btn-search-close');
+    searchClose[1].onclick = function () {
+        $('.search-sm-btns').hide();
+        $('#topic-list-btn').show();
+        $('#topic-title-mobile').removeClass('invisible');
+    }
+
+    currentTextSize = getTextSizeFromCookie();
+    setDocumentTextSize(currentTextSize);  
+    
+    var searchTxtBox = $('.topic-search-txt')[0];
+
+    searchTxtBox.oninput = searchTxtBox.onclick = function () {
+        $('#overlay').show();
+        $('.left-search-icon')[0].hidden = true;
+        $('#results-container').removeClass('mega-z-index');
+        $('#search-container-parent').removeClass('clear-background');
+        $('#search-container-parent').addClass('white-background');
+        $('.search-container')[0].classList.add('search-container-lg');
+        searchTxtBox.classList.add('srch-txt-big');
+        $('.search-lg-btns')[0].hidden = false;
+        $('#viewport-container').addClass('no-vertical-scroll');
+    };
+
+    setTabIndices();
+
+    var focusableElements =
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    var modal = document.querySelector('#feedback-popup');
+
+    firstFocusableElement = modal.querySelectorAll(focusableElements)[0]; // get first element to be focused inside modal
+    focusableContent = modal.querySelectorAll(focusableElements);
+    lastFocusableElement = focusableContent[focusableContent.length - 2]; 
+    
+});
+
+function setTabIndices() {
+
+    $('a.topic-link:hidden').attr('tabindex', '-1');
+    $('input[type=text]:hidden').attr('tabindex', '-1');
+    $('a.footer-link:hidden').attr('tabindex', '-1');
+
+    $('a.topic-link:visible').each(function () {
+        $(this).attr('tabindex', (tabIndex++ + ""));
+    });
+
+    var searchFeedbackBtnArr = $('#searchFeedbackBtn:visible');
+    if (searchFeedbackBtnArr.length) {
+        searchFeedbackBtnArr[0].setAttribute('tabindex', (tabIndex++ + ""));
+        $('#searchPopUpCloseX')[0].setAttribute('tabindex', (tabIndex++ + ""));
+        $('#searchCommentsTextArea')[0].setAttribute('tabindex', (tabIndex++ + ""));
+        $('#searchFeedbackCancelBtn')[0].setAttribute('tabindex', (tabIndex++ + ""));
+        searchFdbkSbmtBtnTabIndex = tabIndex++;
+    }
+
+    var documentLinks = $('button.btn-document-title');
+    if (documentLinks.length) {
+        documentLinks.each(function () {
+            $(this).attr('tabindex', (tabIndex++ + ""));
+        });
+    }
+
+    var pageLinks = $('.page-link');
+    if (pageLinks.length) {
+        pageLinks.each(function () {
+            if (!$(this)[0].style.pointerEvents) {
+                $(this).attr('tabindex', (tabIndex++ + ""));
+            }
+        });   
+    }
+
+}
+
+// Might need to debug future keyboard trap issues
+document.onkeydown = function (e) {
+
+    if (e.keyCode === 9 || e.key === 'Tab') {
+        if ((lastTabIndex == 5 && document.activeElement.tabIndex == 4 && e.shiftKey)
+            || (lastTabIndex == 5 && document.activeElement.tabIndex == 6 && !e.shiftKey)) {
+            minimizeSearch();
+        }
+        lastTabIndex = document.activeElement.tabIndex;
+
+        if (e.shiftKey) { // if shift key pressed for shift + tab combination
+            if (document.activeElement === firstFocusableElement) {
+                lastFocusableElement.focus(); // add focus for the last focusable element
+                e.preventDefault();
+            }
+        } else { // if tab key is pressed
+            if (document.activeElement === lastFocusableElement) { // if focused has reached to last focusable element then focus first focusable element after pressing tab
+                firstFocusableElement.focus(); // add focus for the first focusable element
+                e.preventDefault();
+            }
+        }
+
+    } else if (e.keyCode == 27) {
+
+        if ($('.topic-search-txt')[0].classList.contains("srch-txt-big")) {
+            minimizeSearch();
+        }
+
+        var feedbackPopUp = $('#feedback-popup:visible');
+        if (feedbackPopUp[0]) {
+            hideFeedbackPopup();
+            $('#feedbackBtn').focus();
+        }
+    }
+
+}
+
+function skipToMain() {
+    document.location.href = "#results-container";
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+function getTextSizeFromCookie() {
+
+    var textSizeInCookie;
+    var cookieArr = document.cookie.split(";");
+
+    for (var i = 0; i < cookieArr.length; i++) {
+        if (!cookieArr[i].trim().indexOf(textSizeCookieName)) {
+            textSizeInCookie = parseFloat(cookieArr[i].trim().slice(textSizeCookieName.length - cookieArr[i].trim().length));
+            break;
+        }
+    }
+
+    if (!textSizeInCookie) {
+        textSizeInCookie = 1.0;
+    }
+
+    return textSizeInCookie;
+}
+
+window.onresize = function () {
+    if (resizeTimeout) {
+        clearTimeout(resizeTimeout);
+    }
+
+    resizeTimeout = setTimeout(function () {
+        resizeSearchContainer();
+    }, 100);
+}
+
+function setDocumentTextSize(textSize) {
+
+    currentTextSize = textSize;
+    document.cookie = textSizeCookieName + textSize + ";domain=" + window.location.hostname + ";path=/;secure";
+
+    $('#lbl-text-size-percentage').html((textSize * 100) + "%");
+
+    var btnDecreaseTxtSize = $('#btn-decrease-txt-size');
+    btnDecreaseTxtSize.removeClass('disable-container');
+
+    var btnIncreaseTxtSize = $('#btn-increase-txt-size');
+    btnIncreaseTxtSize.removeClass('disable-container');
+
+    if (!textSizeArr.indexOf(textSize)) {
+        btnDecreaseTxtSize.addClass('disable-container');
+    } else if (textSizeArr.indexOf(textSize) == textSizeArr.length - 1) {
+        btnIncreaseTxtSize.addClass('disable-container');
+    }
+
+    var cssRules = style.sheet.cssRules;
+    for (var i = cssRules.length - 1; i >= 0; i--) {
+        if (cssRules[i].selectorText == '.font-resize') {
+            style.sheet.deleteRule(i);
+        }
+    }
+
+    style.sheet.insertRule(".font-resize{font-size:" + textSize + "em;}", 0);
+    resizeSearchContainer();
+
+}
+
+function resizeSearchContainer() {
+    var searchContainerWidth = $('#ghost-container').width() + 31;
+    $('.search-container')[0].style["min-width"] = searchContainerWidth + "px";
+}
+
+function minimizeSearch() {
+    $('#overlay').hide();
+    $('.left-search-icon')[0].hidden = false;
+    $('#search-container-parent').addClass('clear-background');
+    $('#search-container-parent').removeClass('white-background');
+    $('.search-container')[0].classList.remove('search-container-lg');
+    $('.topic-search-txt')[0].classList.remove('srch-txt-big');
+    $('.search-lg-btns')[0].hidden = true;
+    $('#viewport-container').removeClass('no-vertical-scroll');
+    $('#results-container').addClass('mega-z-index');
+}
+
+function getPartnerPath(supportCentreAppName) {
+    var paths = document.location.pathname.split("/");
+    var partnerPath = "/";
+    // pathname always starts "/" , so the first one is always empty
+    if (supportCentreAppName) {
+        // if supportCentreAppName is non-empty, the third one is the partner path
+        // e.g. /SupportCentre/greenshield/Home/...
+        if (paths.length > 2) {
+            partnerPath += paths[2];
+        }
+    } else {
+        // if supporeCentreAppName is empty, the second one is the partner path
+        // e.g. /greenshield/Home/...
+        if (paths.length > 1) {
+            partnerPath += paths[1];
+        }
+    }
+    return partnerPath;
+}
+
+function ensureValidPath(path) {
+    // ensure the path value to start with a slash
+    if (path && path.length > 0) {
+        var startsWith = path.substr(0, 1);
+        if (startsWith !== '/') {
+            path = '/' + path;
+        }   
+    }
+    return path;
+}
+
+function showDocumentDetail(button, supportCentreAppName) {
+
+    var resultContainerMinHeight = $('#results-container').css('min-height');
+    var scrollHeight = window.scrollY;
+    if (isNaN(scrollHeight)) {
+        scrollHeight = window.pageYOffset;
+    }
+    var positionY = scrollHeight + (parseInt(resultContainerMinHeight)/2);
+    $('#documents-list').addClass('disable-container');
+    var spinnerContainerParent = $('#spinner-container-parent');
+    spinnerContainerParent.css({ "top": positionY + "px" });
+    spinnerContainerParent.show();
+    var pageUrl = document.location.origin;
+
+    if (supportCentreAppName) {
+        pageUrl += ensureValidPath(supportCentreAppName);
+    }
+    // append the partner path before specifying controller & action
+    pageUrl += getPartnerPath(supportCentreAppName)
+    
+    pageUrl += '/Home/Document/' + button.value;
+
+    $.ajax({
+        type: "GET",
+        url: pageUrl,
+        contentType: "application/json; charset=utf-8",
+        data: { id: button.value },
+        dataType: "json",
+        success: function (response) {
+            $('#spinner-container-parent').hide();
+            $('#documents-list').removeClass('disable-container');
+
+            var browser = get_browser();
+            if (browser && browser.name == "IE" && browser.version == "11") {
+                if (response.document.type == "vkm:UploadedContent") {
+                    window.open(response.document.url, '_blank');
+                } else {
+                    showArticle(response);
+                }
+            } else {
+                showArticle(response);
+            }            
+        },
+        error: function (response) {
+            $('#spinner-container-parent').hide();
+            $('#documents-list').removeClass('disable-container');
+            $('#error-modal').modal('show');
+        }
+    });
+}
+
+function showArticle(response) {
+    var documentTitle = '<h2><span id="document-title" class="font-resize"> ' + response.document.title +' </span></h2>';
+    $('#document-header-container').html(documentTitle);
+    $('#document-content').html(response.document.content);
+    $('#feedbackBtn').val(response.feedback.feedbackLink); 
+    // dynamically creating feedback radio options
+    var feedbackOptions = '';
+    var radioId;
+    var radioValues;
+    var itemValue;
+    var rawItemValue;
+    var rawItemKey;
+    $.each(response.feedback.feedbackOptions, function (index, item) {
+
+
+        if (item.value) {
+            rawItemValue = item.value;
+            rawItemKey = item.key;
+        } else if (radio.value) {
+            rawItemValue = item.value;
+            rawItemKey = item.key;
+        }
+
+        radioValues = rawItemValue.split(";");
+        if (radioValues.length == 1) {
+            itemValue = radioValues[0];
+        } else {
+            if (culture.includes("en")) {
+                itemValue = radioValues[0];
+            } else {
+                itemValue = radioValues[1];
+            }
+        }
+
+
+
+        radioId = "feedbackRadio" + rawItemValue;
+        feedbackOptions +=
+            '<div class="form-check">' +
+            '<input class="form-check-input" type="radio" name="feedbackRadioOptions" id="' + radioId + '" value="' + rawItemKey + '">' +
+            '<label class="form-check-label" for="' + radioId + '">' + itemValue + '</label>' +
+            '</div>';
+
+
+    });
+    $('#feedbackCodeOptions').html(feedbackOptions);
+
+    $("input[name='feedbackRadioOptions']").click(function () {
+        var feedbackBtn = $('#feedbackSubmitBtn');
+        feedbackBtn.removeClass('disable-btn');
+        feedbackBtn[0].removeAttribute("tabindex");
+        lastFocusableElement = focusableContent[focusableContent.length - 1]; 
+    });
+
+    $('#documents-list').hide();
+    $('#document-detail').show();
+}
+
+function get_browser() {
+    var ua = navigator.userAgent, tem, M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+    if (/trident/i.test(M[1])) {
+        tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
+        return { name: 'IE', version: (tem[1] || '') };
+    }
+    if (M[1] === 'Chrome') {
+        tem = ua.match(/\bOPR|Edge\/(\d+)/)
+        if (tem != null) { return { name: 'Opera', version: tem[1] }; }
+    }
+    M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
+    if ((tem = ua.match(/version\/(\d+)/i)) != null) { M.splice(1, 1, tem[1]); }
+    return {
+        name: M[0],
+        version: M[1]
+    };
+}
+
+function hideDocumentDetail() {
+    
+    $('#documents-list').show();
+    $('#document-detail').hide();
+}
+
+function showTopicList() {
+    $('#topic-list-hide-container').show();
+    $('#default-mobile-menu').hide();
+    $('#mobile-topic-list').show();
+    $('#overlay').show();
+    $('#search-box-caption').hide();
+    $('#lbl-topic-slect-mobile').show();
+}
+
+function hideTopicList() {
+    $('#topic-list-hide-container').hide();
+    $('#default-mobile-menu').show();
+    $('#mobile-topic-list').hide();
+    $('#overlay').hide();
+    $('#search-box-caption').show();
+    $('#lbl-topic-slect-mobile').hide();
+}
+
+$('.dropdown-menu a.btn-text-resize').click(function (e) {
+    e.stopPropagation();
+});
+
+function decreaseTextSize() {
+    
+    if (!currentTextSize) {
+        currentTextSize = getTextSizeFromCookie();
+    }
+    
+    setDocumentTextSize(textSizeArr[textSizeArr.indexOf(currentTextSize) - 1]);
+}
+
+function increaseTextSize() {
+
+    if (!currentTextSize) {
+        currentTextSize = getTextSizeFromCookie();
+    }
+    
+    setDocumentTextSize(textSizeArr[textSizeArr.indexOf(currentTextSize) + 1]);
+}
+
+function submitFeedback(supportCentreAppName) {
+
+    $('#content-form-spinner-container-parent').show();
+    $('#feedback-form').addClass('disable-container');
+
+    var feedbackLink = $('#feedbackBtn').val();
+    var radioSelection = $("input[name='feedbackRadioOptions']:checked").val();
+    var feedbackComment = $("#commentsTextArea").val();
+    var cleansedPhrase = feedbackComment.replaceAll(new RegExp((/[\[\]{}$&+_,:;=?@#~|'"<>.^*()%!\\\\/]/), 'g'), "").trim();
+    var pageUrl = document.location.origin;
+    if (supportCentreAppName) {
+        pageUrl += ensureValidPath(supportCentreAppName);
+    }
+
+    pageUrl += getPartnerPath(supportCentreAppName)
+
+    pageUrl += '/Home/Document/Feedback';
+
+
+    var feedbackObj = {
+        selectedfeedbackcode: radioSelection,
+        description: cleansedPhrase,
+        feedbacklink: feedbackLink
+    }
+
+    var str = JSON.stringify(feedbackObj);
+
+    $.ajax({
+        type: "POST",
+        url: pageUrl,
+        contentType: "application/json; charset=utf-8",
+        data: str,
+        dataType: null,
+        success: function (response) {
+            $('#content-form-spinner-container-parent').hide();
+            $('#feedback-form').removeClass('disable-container');
+            $('#feedback-form').hide();
+            $('#feedback-popup').addClass("feedback-popup-success");
+            $('#feedback-success').show();
+            lastFocusableElement = firstFocusableElement; 
+            $('#feedback-x').focus();
+        },
+        error: function (response) {
+            $('#content-form-spinner-container-parent').hide();
+            $('#feedback-form').removeClass('disable-container');
+            hideFeedbackPopup();
+            $('#error-modal').modal('show');
+        }
+    });
+
+}
+
+function showFeedbackPopup() {
+    $('#feedbackSubmitBtn').addClass('disable-btn');
+    $('#feedback-popup').removeClass("feedback-popup-success");
+    $('input[name="feedbackRadioOptions"]').prop('checked', false);
+    $("#commentsTextArea").val("");
+    $('#max-character-limit-msg').hide();
+
+    $('#feedback-form').show();
+    $('#feedback-success').hide();
+    $('#feedback-popup').show();
+}
+
+function hideFeedbackPopup() {
+    $('#feedback-popup').hide();
+    lastFocusableElement = focusableContent[focusableContent.length - 2]; 
+}
+
+$(document).mouseup(function (e) {
+    var container = $("#feedback-popup");
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+        container.hide();
+    }
+
+    var container2 = $("#search-feedback-popup");
+    if (!container2.is(e.target) && container2.has(e.target).length === 0) {
+        container2.hide();
+    }
+});
+
+$("#overlay").mouseup(function (e) {
+    minimizeSearch();
+});
+
+function showSearchFeedbackPopup() {
+    $('#searchFeedbackSubmitBtn').addClass('disable-btn');
+    $('#searchCommentsTextArea').val("");
+    $('#search-feedback-form').show();
+    $('#search-feedback-success').hide();
+    $('#search-feedback-popup').show();
+    $('#search-max-character-limit-msg').hide();
+}
+
+$("#searchCommentsTextArea").on("keyup", function (e) {
+
+    $('#search-max-character-limit-msg').hide();
+    var searchFeedbackSubmitBtn = $('#searchFeedbackSubmitBtn');
+    if (e.target.value) {
+        
+        searchFeedbackSubmitBtn.removeClass('disable-btn');
+        searchFeedbackSubmitBtn[0].tabIndex = searchFdbkSbmtBtnTabIndex + "";
+    } else {
+        searchFeedbackSubmitBtn.addClass('disable-btn');
+        searchFeedbackSubmitBtn[0].tabIndex = "-1";
+    }
+
+    if (e.target.value.length == 400) {
+        $('#search-max-character-limit-msg').show();
+    }
+});
+
+$("#commentsTextArea").on("keyup", function (e) {
+    $('#max-character-limit-msg').hide();
+    if (e.target.value.length == 400) {
+        $('#max-character-limit-msg').show();
+    }
+});
+
+function hideSearchFeedbackPopup() {
+    $('#search-feedback-popup').hide();
+}
+
+function submitSearchFeedback(feedbackLink, supportCentreAppName) {
+
+    $('#search-fdbk-form-spinner-container-parent').show();
+    $('#search-feedback-form').addClass('disable-container');
+
+    var feedbackComment = $("#searchCommentsTextArea").val();
+    var feedbackObj = {
+        description: feedbackComment,
+        feedbacklink: feedbackLink
+    }
+
+    var str = JSON.stringify(feedbackObj);
+
+    var pageUrl = document.location.origin;
+    if (supportCentreAppName) {
+        pageUrl += ensureValidPath(supportCentreAppName);
+    }
+    pageUrl += getPartnerPath(supportCentreAppName)
+    pageUrl += '/Home/Search/Feedback';
+
+    $.ajax({
+        type: "POST",
+        url: pageUrl,
+        contentType: "application/json; charset=utf-8",
+        data: str,
+        dataType: null,
+        success: function (response) {
+            $('#search-fdbk-form-spinner-container-parent').hide();
+            $('#search-feedback-form').removeClass('disable-container');
+            $('#search-feedback-form').hide();
+            $('#search-feedback-success').show();
+        },
+        error: function (response) {
+            $('#search-fdbk-form-spinner-container-parent').hide();
+            $('#search-feedback-form').removeClass('disable-container');
+            hideSearchFeedbackPopup();
+            $('#error-modal').modal('show');
+        }
+    });
+}
+
+function dismissSearchMaxCharLimitMsg() {
+    $('#search-max-character-limit-msg').hide();
+}
+
+function dismissMaxCharLimitMsg() {
+    $('#max-character-limit-msg').hide();
+}

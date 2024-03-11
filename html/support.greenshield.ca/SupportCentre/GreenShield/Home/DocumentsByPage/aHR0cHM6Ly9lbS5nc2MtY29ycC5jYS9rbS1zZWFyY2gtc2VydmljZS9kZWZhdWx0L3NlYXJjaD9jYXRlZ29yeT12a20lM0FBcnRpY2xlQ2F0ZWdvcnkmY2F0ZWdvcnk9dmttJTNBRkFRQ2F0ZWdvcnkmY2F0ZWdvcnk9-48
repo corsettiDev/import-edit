@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- Mirrored from support.greenshield.ca/SupportCentre/greenshield/Home/DocumentsByPage/aHR0cHM6Ly9lbS5nc2MtY29ycC5jYS9rbS1zZWFyY2gtc2VydmljZS9kZWZhdWx0L3NlYXJjaD9jYXRlZ29yeT12a20lM0FBcnRpY2xlQ2F0ZWdvcnkmY2F0ZWdvcnk9dmttJTNBRkFRQ2F0ZWdvcnkmY2F0ZWdvcnk9dmttJTNBVXBsb2FkZWRDYXRlZ29yeSZ0YWc9cmVnaW9uX2ZhcXMmbGFuZz1mciZzaXplPTUmc3RhcnQ9MTAw by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Mar 2024 18:43:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../../../lib/bootstrap/css/bootstrap.html" rel="stylesheet" />
+    <link href="../../../lib/bootstrap/css/bootstrap-grid.html" rel="stylesheet" />
+    <link href="../../../common/css/siteskin8d64.html?v=1709627875107" rel="stylesheet" />
+    <link href="../../../sitespecfic/GREENSHIELD/css/site.html" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-T8SVXJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'GTM-T8SVXJ');
+
+        var culture = 'fr-CA';
+
+    </script>
+
+    <title>Centre d&#x27;assistance</title>
+</head>
+<body>
+    <div style="position:relative; overflow-x:hidden;" id="viewport-container">
+        <div style="width:100%">
+            <a href="javascript:skipToMain();" class="link-skip-to-main gsc-font" tabindex="1">
+                <span class="font-resize">[FR] Skip to main content</span>
+            </a>
+            <div class="container-fluid fixed-top header-background" style="margin:0; padding: 0; z-index:6001;" role="banner">
+                
+<div class="inner-container header-top-container">
+    <div class="row header-top-contents vertical-align-middle">
+        <div class="col-auto align-text-center">
+            <a href='../../../../../www.greenshield.ca/fr-ca.html' target="_blank" tabindex="2">
+                <img src="../../../sitespecfic/GREENSHIELD/images/fr-CA/SiteLogo.html" alt='GREENSHIELD' type="image/svg+xml" class="site-logo site-logo-french" />
+            </a>
+        </div>
+        <div class="col d-flex">
+            <div class="ml-auto" style="display: flex; align-items: center; flex-wrap: wrap;">
+                <div class="dropdown show lang-dropdown-container">
+                    <a class="lang-dropdown-toggle align-text-center gsc-font line-height-2" tabindex="3" href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-expanded="false">
+                        <span class="font-resize">Fran&#xE7;ais</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-container gsc-box-shadow" aria-labelledby="dropdownMenuLink1">
+                        <span class="dropdown-menu-arrow"></span>
+                        <ul class="lang-dropdown-list">
+                            <li><a class="dropdown-item lang-dropdown-item gsc-border gsc-font text-center" href='../SetLanguage370e.html?culture=en-CA&amp;returnUrl=%2FSupportCentre%2Fgreenshield%2FHome'><span class="font-resize">English</span></a></li>
+                            <li><a class="dropdown-item lang-dropdown-item gsc-border no-border-top gsc-font text-center" href='../SetLanguage0fb7.html?culture=fr-CA&amp;returnUrl=%2FSupportCentre%2Fgreenshield%2FHome'><span class="font-resize">Fran&#xE7;ais</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-size-btn-container">
+                    <div class="dropdown show" style="padding: 0  0 0 15px;">
+                        <a class="header-btn align-text-center line-height-2" href="#" tabindex="4" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-expanded="false">
+                            <span style="font-size:16px;"><span class="font-resize">A</span></span>
+                            <span style="font-size:10px;"><span class="font-resize">A</span></span>
+                        </a>
+                        <div class="dropdown-menu text-resize-dd-container gsc-box-shadow" aria-labelledby="dropdownMenuLink2">
+                            <span class="dropdown-menu-arrow txt-resize-dd-arrow-coordinates"></span>
+                            <div class="lang-dropdown-list text-break" style="margin: 15px 10px;">
+                                <span class="lbl-text-resize gsc-font gsc-font-color"><span class="font-resize">Diminuer ou augmenter la taille du texte:</span></span>
+                                <div style="display:flex; flex-direction:row;">
+                                    <button id="btn-decrease-txt-size" aria-label="Diminuer la taille du texte" tabindex="5" class="btn-text-resize gsc-font align-text-center text-decoration-none btn-text-resize" href='#' onclick="decreaseTextSize();">
+                                        <i class="fas fa-minus" aria-hidden="true"></i>
+                                    </button>
+                                    <span class="align-text-center flex-grow-1 gsc-font gsc-font-color">
+                                        <span id="lbl-text-size-percentage" class="font-resize"></span>
+                                    </span>
+                                    <button id="btn-increase-txt-size" aria-label="Augmenter la taille du texte" tabindex="6" class="btn-text-resize  gsc-font align-text-center text-decoration-none btn-text-resize" href='#' onclick="increaseTextSize();">
+                                        <i class="fas fa-plus" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="header-divider"></div>
+<div class="support-centre-bar support-centre-bar-dim header-shadow">
+    <div class="center-contents" style="width:fit-content;">
+        <div class="d-flex support-centre-container align-text-center">
+            <span style="padding-top:10px;"><object data="../../../common/images/wssk-icon.html" type="image/svg+xml" class="support-centre-img" tabindex="-1">Support Centre</object></span>
+            <span class="support-centre-lbl"><span class="font-resize">Centre d&#x27;assistance</span></span>
+        </div>
+    </div>
+</div>
+
+            </div>
+
+            <div id="search-container-parent" class="search-container-parent scp-coordinates clear-background">
+                <div style="max-width: 1600px; margin: 0 auto; width:auto; position: relative; background:transparent;">
+                    <div class="search-component-lg search-container search-container-sm">
+    <form class="form-inline" method="post" role="search" action="https://support.greenshield.ca/SupportCentre/greenshield/Home/DocumentsForSearch">
+        <fieldset>
+            <div class="search-form-container">
+                <div style="width:100%; position:relative;" class="gsc-font">
+                    <span aria-hidden="true"><i class="fas fa-search left-search-icon font-resize"></i></span>
+                    <label for='SearchTextBox1' class="visually_hidden">Search</label>
+                    <input id='SearchTextBox1' tabindex="7" autocomplete="off" class="topic-search-txt form-control srch-txt-small font-resize" placeholder='Cliquez ici pour faire votre recherche.' style="width:100%;" type="text" name="SearchText" value="">
+                </div>
+                <div hidden class="search-lg-btns">
+                    <button aria-label='Rechercher' tabindex="8" class="btn-search-bar gsc-border gsc-font align-text-center">
+                        <i class="fas fa-search search-icon font-resize btn-icon" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" aria-label='Fermer' tabindex="9" class="btn-search-bar gsc-border gsc-font align-text-center" onclick="minimizeSearch()">
+                    
+                        <i class="fas fa-times font-resize btn-icon" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </fieldset>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8KmnGSmbwWdHv-MA0soYgETlOgfaMgke0eEcbg0okZVjfhBRF3Krrilpa2VEDc_WrqWup5kdL7QGyU7f86WfqDgO8LjYdLzS2apIpo4DZ1hvPyPcdgOfc6QNHdsIk7pKUGIunoN4Ia1lDpO9l364QSs" /></form>
+</div>
+
+<div class="search-component-sm vertical-align-middle" style="width:100%;">
+    <form class="form-inline" method="post" role="search" action="https://support.greenshield.ca/SupportCentre/greenshield/Home/DocumentsForSearch">
+        <fieldset>
+            <div class="search-form-container">
+                <div style="width:100%; position:relative;">
+                    <i class="fas fa-search left-search-icon left-search-icon-font" aria-hidden="true"></i>
+                    <label for="SearchTextBox2" class="visually_hidden">Search</label>
+                    <input autocomplete="off" id='SearchTextBox2' class="topic-search-txt-sm form-control srch-txt-small gsc-font" placeholder='Cliquez ici pour faire votre recherche.' style="width:100%;height:30px;" type="text" name="SearchText" value="">
+                </div>
+                <div class="search-sm-btns" style="display:none;margin-right:15px;">
+                    <button aria-label='Rechercher' class="btn btn-search-bar gsc-border align-text-center" style="padding:2px; height:30px;">
+                        <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" aria-label='Fermer' class="btn btn-search-bar btn-search-close gsc-border align-text-center" style="padding:2px; height:30px; margin-right:0;">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </fieldset>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8KmnGSmbwWdHv-MA0soYgETlOgfaMgke0eEcbg0okZVjfhBRF3Krrilpa2VEDc_WrqWup5kdL7QGyU7f86WfqDgO8LjYdLzS2apIpo4DZ1hvPyPcdgOfc6QNHdsIk7pKUGIunoN4Ia1lDpO9l364QSs" /></form>
+</div>
+                </div>
+            </div>
+            <div id="search-container-parent-sm" class="search-container-parent-sm">
+                <div style="display:flex; flex-direction:row; width:100%;">
+                    <div style="flex-grow:1;padding: 0 15px;">
+                        <span id="lbl-topic-slect-mobile" class="label-text" style="display:none;">S&#xE9;lectionnez le sujet</span>
+                    </div>
+                    <div style="padding: 0 15px;position:relative;z-index:1;width:72.5px;">
+                        <span id="topic-title-mobile" class="label-text text-uppercase">Sujet</span>
+                        <div style="top:20px;display:none;" id="topic-list-hide-container" class="horizontal-align-center">
+                            <button type="button" class="btn btn-search-bar no-border" aria-label='Fermer' style="padding:0; margin:0;" onclick="hideTopicList()">
+                                <i class="fas fa-times align-middle" style="font-size:35px;" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div style="display:flex;" id="default-mobile-menu">
+                    <div style="flex-grow:1; margin-left:15px; position:relative;height:30px;">
+                        <div class="search-component-lg search-container search-container-sm">
+    <form class="form-inline" method="post" role="search" action="https://support.greenshield.ca/SupportCentre/greenshield/Home/DocumentsForSearch">
+        <fieldset>
+            <div class="search-form-container">
+                <div style="width:100%; position:relative;" class="gsc-font">
+                    <span aria-hidden="true"><i class="fas fa-search left-search-icon font-resize"></i></span>
+                    <label for='SearchTextBox3' class="visually_hidden">Search</label>
+                    <input id='SearchTextBox3' tabindex="7" autocomplete="off" class="topic-search-txt form-control srch-txt-small font-resize" placeholder='Cliquez ici pour faire votre recherche.' style="width:100%;" type="text" name="SearchText" value="">
+                </div>
+                <div hidden class="search-lg-btns">
+                    <button aria-label='Rechercher' tabindex="8" class="btn-search-bar gsc-border gsc-font align-text-center">
+                        <i class="fas fa-search search-icon font-resize btn-icon" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" aria-label='Fermer' tabindex="9" class="btn-search-bar gsc-border gsc-font align-text-center" onclick="minimizeSearch()">
+                    
+                        <i class="fas fa-times font-resize btn-icon" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </fieldset>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8KmnGSmbwWdHv-MA0soYgETlOgfaMgke0eEcbg0okZVjfhBRF3Krrilpa2VEDc_WrqWup5kdL7QGyU7f86WfqDgO8LjYdLzS2apIpo4DZ1hvPyPcdgOfc6QNHdsIk7pKUGIunoN4Ia1lDpO9l364QSs" /></form>
+</div>
+
+<div class="search-component-sm vertical-align-middle" style="width:100%;">
+    <form class="form-inline" method="post" role="search" action="https://support.greenshield.ca/SupportCentre/greenshield/Home/DocumentsForSearch">
+        <fieldset>
+            <div class="search-form-container">
+                <div style="width:100%; position:relative;">
+                    <i class="fas fa-search left-search-icon left-search-icon-font" aria-hidden="true"></i>
+                    <label for="SearchTextBox4" class="visually_hidden">Search</label>
+                    <input autocomplete="off" id='SearchTextBox4' class="topic-search-txt-sm form-control srch-txt-small gsc-font" placeholder='Cliquez ici pour faire votre recherche.' style="width:100%;height:30px;" type="text" name="SearchText" value="">
+                </div>
+                <div class="search-sm-btns" style="display:none;margin-right:15px;">
+                    <button aria-label='Rechercher' class="btn btn-search-bar gsc-border align-text-center" style="padding:2px; height:30px;">
+                        <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" aria-label='Fermer' class="btn btn-search-bar btn-search-close gsc-border align-text-center" style="padding:2px; height:30px; margin-right:0;">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </fieldset>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8KmnGSmbwWdHv-MA0soYgETlOgfaMgke0eEcbg0okZVjfhBRF3Krrilpa2VEDc_WrqWup5kdL7QGyU7f86WfqDgO8LjYdLzS2apIpo4DZ1hvPyPcdgOfc6QNHdsIk7pKUGIunoN4Ia1lDpO9l364QSs" /></form>
+</div>
+                    </div>
+                    <div style="padding:0 15px;" id="topic-list-btn">
+                        <button type="button" class="btn btn-search-bar no-border" aria-label='Menu' style="padding:0; margin:0; width:40px;" onclick="showTopicList()">
+                            <i class="fas fa-bars align-middle" style="font-size:30px;" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="mobile-topic-list" style="display:none;" class="mobile-topic-list">
+                    <div role="navigation">
+                        <div class="nav gsc-navbar-lg">
+    <nav class="navbar" style="padding-left:0px; flex-direction:column; align-items:flex-start; width: 100%; padding-right: 0;">
+        <span class="label-text"><span class="font-resize">S&#xE9;lectionnez le sujet</span></span>
+        <ul class="navbar-nav" style="width:100%;">
+                <li class="nav-item align-content-center navbar-list-item">
+                    <a class="btn-block text-left nav-list-link gsc-font vertical-text-align-middle topic-link" topic_identifier="region_travel" href="../DocumentsByTopic/region_travel.html">
+                        <span class="font-resize">Voyage</span>
+                    </a>
+                </li>
+                <li class="nav-item align-content-center navbar-list-item">
+                    <a class="btn-block text-left nav-list-link gsc-font vertical-text-align-middle topic-link" topic_identifier="region_amicovered" href="../DocumentsByTopic/region_amicovered.html">
+                        <span class="font-resize">Suis-je couvert?</span>
+                    </a>
+                </li>
+                <li class="nav-item align-content-center navbar-list-item">
+                    <a class="btn-block text-left nav-list-link gsc-font vertical-text-align-middle topic-link" topic_identifier="region_howdoisubmitaclaim" href="../DocumentsByTopic/region_howdoisubmitaclaim.html">
+                        <span class="font-resize">Assistance pour les r&#xE9;clamations</span>
+                    </a>
+                </li>
+                <li class="nav-item align-content-center navbar-list-item">
+                    <a class="btn-block text-left nav-list-link gsc-font vertical-text-align-middle topic-link" topic_identifier="region_onlineregistration" href="../DocumentsByTopic/region_onlineregistration.html">
+                        <span class="font-resize">Service d&#x27;assistance en ligne</span>
+                    </a>
+                </li>
+                <li class="nav-item align-content-center navbar-list-item">
+                    <a class="btn-block text-left nav-list-link gsc-font vertical-text-align-middle topic-link" topic_identifier="region_forms" href="../DocumentsByTopic/region_forms.html">
+                        <span class="font-resize">Formulaires</span>
+                    </a>
+                </li>
+                <li class="nav-item align-content-center navbar-list-item">
+                    <a class="btn-block text-left nav-list-link gsc-font vertical-text-align-middle topic-link" topic_identifier="region_faqs" href="../DocumentsByTopic/region_faqs.html">
+                        <span class="font-resize">FAQ</span>
+                    </a>
+                </li>
+                <li class="nav-item align-content-center navbar-list-item">
+                    <a class="btn-block text-left nav-list-link gsc-font vertical-text-align-middle topic-link" topic_identifier="region_auditedclaims" href="../DocumentsByTopic/region_auditedclaims.html">
+                        <span class="font-resize">R&#xE9;clamations sous v&#xE9;rification</span>
+                    </a>
+                </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="gsc-navbar-sm">
+    <ul style="list-style:none;padding-left:0;max-height:calc(100vh - 240px);overflow-y:scroll;">
+            <li>
+                <a class="btn btn-block text-left nav-list-link gsc-font" topic_identifier="region_travel" href="../DocumentsByTopic/region_travel.html">  Voyage </a>
+            </li>
+            <li>
+                <a class="btn btn-block text-left nav-list-link gsc-font" topic_identifier="region_amicovered" href="../DocumentsByTopic/region_amicovered.html">  Suis-je couvert? </a>
+            </li>
+            <li>
+                <a class="btn btn-block text-left nav-list-link gsc-font" topic_identifier="region_howdoisubmitaclaim" href="../DocumentsByTopic/region_howdoisubmitaclaim.html">  Assistance pour les r&#xE9;clamations </a>
+            </li>
+            <li>
+                <a class="btn btn-block text-left nav-list-link gsc-font" topic_identifier="region_onlineregistration" href="../DocumentsByTopic/region_onlineregistration.html">  Service d&#x27;assistance en ligne </a>
+            </li>
+            <li>
+                <a class="btn btn-block text-left nav-list-link gsc-font" topic_identifier="region_forms" href="../DocumentsByTopic/region_forms.html">  Formulaires </a>
+            </li>
+            <li>
+                <a class="btn btn-block text-left nav-list-link gsc-font" topic_identifier="region_faqs" href="../DocumentsByTopic/region_faqs.html">  FAQ </a>
+            </li>
+            <li>
+                <a class="btn btn-block text-left nav-list-link gsc-font" topic_identifier="region_auditedclaims" href="../DocumentsByTopic/region_auditedclaims.html">  R&#xE9;clamations sous v&#xE9;rification </a>
+            </li>
+    </ul>
+</div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay" id="overlay"></div>
+            <div style="position: relative; top: 0; left: 0; display: flex; flex-direction: column; min-height:100vh;">
+                <div class="contents-container">
+                    <div class="inner-container">
+                        <div style="padding:15px;padding-top:0; position:relative;">
+                            <div class="row">
+                                <div class="col-md-auto sc-nav-container">
+                                    <div id="ghost-container" style="padding: 20px 0;">
+                                        <span class="label-text">
+
+                                        </span>
+                                        <div class="gsc-font">
+                                            <label for="ghost-text-box" class="visually_hidden">Cliquez ici pour faire votre recherche.</label>
+                                            <input id="ghost-text-box" autocomplete="off" tabindex="-1" class="form-control srch-txt-small font-resize" placeholder="Cliquez ici pour faire votre recherche.">
+                                        </div>
+                                    </div>
+                                    <div role="navigation"><div class="nav gsc-navbar-lg">
+    <nav class="navbar" style="padding-left:0px; flex-direction:column; align-items:flex-start; width: 100%; padding-right: 0;">
+        <span class="label-text"><span class="font-resize">S&#xE9;lectionnez le sujet</span></span>
+        <ul class="navbar-nav" style="width:100%;">
+                <li class="nav-item align-content-center navbar-list-item">
+                    <a class="btn-block text-left nav-list-link gsc-font vertical-text-align-middle topic-link" topic_identifier="region_travel" href="../DocumentsByTopic/region_travel.html">
+                        <span class="font-resize">Voyage</span>
+                    </a>
+                </li>
+                <li class="nav-item align-content-center navbar-list-item">
+                    <a class="btn-block text-left nav-list-link gsc-font vertical-text-align-middle topic-link" topic_identifier="region_amicovered" href="../DocumentsByTopic/region_amicovered.html">
+                        <span class="font-resize">Suis-je couvert?</span>
+                    </a>
+                </li>
+                <li class="nav-item align-content-center navbar-list-item">
+                    <a class="btn-block text-left nav-list-link gsc-font vertical-text-align-middle topic-link" topic_identifier="region_howdoisubmitaclaim" href="../DocumentsByTopic/region_howdoisubmitaclaim.html">
+                        <span class="font-resize">Assistance pour les r&#xE9;clamations</span>
+                    </a>
+                </li>
+                <li class="nav-item align-content-center navbar-list-item">
+                    <a class="btn-block text-left nav-list-link gsc-font vertical-text-align-middle topic-link" topic_identifier="region_onlineregistration" href="../DocumentsByTopic/region_onlineregistration.html">
+                        <span class="font-resize">Service d&#x27;assistance en ligne</span>
+                    </a>
+                </li>
+                <li class="nav-item align-content-center navbar-list-item">
+                    <a class="btn-block text-left nav-list-link gsc-font vertical-text-align-middle topic-link" topic_identifier="region_forms" href="../DocumentsByTopic/region_forms.html">
+                        <span class="font-resize">Formulaires</span>
+                    </a>
+                </li>
+                <li class="nav-item align-content-center navbar-list-item">
+                    <a class="btn-block text-left nav-list-link gsc-font vertical-text-align-middle topic-link" topic_identifier="region_faqs" href="../DocumentsByTopic/region_faqs.html">
+                        <span class="font-resize">FAQ</span>
+                    </a>
+                </li>
+                <li class="nav-item align-content-center navbar-list-item">
+                    <a class="btn-block text-left nav-list-link gsc-font vertical-text-align-middle topic-link" topic_identifier="region_auditedclaims" href="../DocumentsByTopic/region_auditedclaims.html">
+                        <span class="font-resize">R&#xE9;clamations sous v&#xE9;rification</span>
+                    </a>
+                </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="gsc-navbar-sm">
+    <ul style="list-style:none;padding-left:0;max-height:calc(100vh - 240px);overflow-y:scroll;">
+            <li>
+                <a class="btn btn-block text-left nav-list-link gsc-font" topic_identifier="region_travel" href="../DocumentsByTopic/region_travel.html">  Voyage </a>
+            </li>
+            <li>
+                <a class="btn btn-block text-left nav-list-link gsc-font" topic_identifier="region_amicovered" href="../DocumentsByTopic/region_amicovered.html">  Suis-je couvert? </a>
+            </li>
+            <li>
+                <a class="btn btn-block text-left nav-list-link gsc-font" topic_identifier="region_howdoisubmitaclaim" href="../DocumentsByTopic/region_howdoisubmitaclaim.html">  Assistance pour les r&#xE9;clamations </a>
+            </li>
+            <li>
+                <a class="btn btn-block text-left nav-list-link gsc-font" topic_identifier="region_onlineregistration" href="../DocumentsByTopic/region_onlineregistration.html">  Service d&#x27;assistance en ligne </a>
+            </li>
+            <li>
+                <a class="btn btn-block text-left nav-list-link gsc-font" topic_identifier="region_forms" href="../DocumentsByTopic/region_forms.html">  Formulaires </a>
+            </li>
+            <li>
+                <a class="btn btn-block text-left nav-list-link gsc-font" topic_identifier="region_faqs" href="../DocumentsByTopic/region_faqs.html">  FAQ </a>
+            </li>
+            <li>
+                <a class="btn btn-block text-left nav-list-link gsc-font" topic_identifier="region_auditedclaims" href="../DocumentsByTopic/region_auditedclaims.html">  R&#xE9;clamations sous v&#xE9;rification </a>
+            </li>
+    </ul>
+</div></div>
+                                </div>
+                                <div class="col mega-z-index results-container" id="results-container" role="main" tabindex="-1">
+                                    <div id="spinner-container-parent" class="spinner-container-parent" style="display:none;">
+                                        <div class="spinner-container">
+                                            <div class="spinner spinner-1"></div>
+                                        </div>
+                                        <div class="visually_hidden" aria-live="polite"><span>T&#xE9;l&#xE9;chargement en cours</span></div>
+                                    </div>
+                                    
+<div id="documents-list" >
+        <h1 topic_identifier="region_faqs" id="topic-title-lbl" class="topic_title_lbl"><span class="font-resize">R&#xE9;sultats pour FAQ (119)</span></h1>
+
+        
+    <div id="search-feedback-popup" class="feedback-popup search-feedback-popup" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="lbl-search-feedback">
+    <div id="search-fdbk-form-spinner-container-parent" class="form-spinner-container-parent" style="display:none;">
+        <div class="form-spinner-container">
+            <div class="form-spinner form-spinner-1"></div>
+        </div>
+        <div class="visually_hidden" aria-live="polite"><span>T&#xE9;l&#xE9;chargement en cours</span></div>
+    </div>
+    <div class="align-text-center feedback-form-header partner-background">
+        <div style="flex-grow:1; padding-left: 15px;">
+            <h2 class="text-uppercase partner-color" id="lbl-search-feedback">
+                <span class="font-resize partner-feedback-header">Commentaires</span>
+            </h2>
+        </div>
+        <div>
+            <button class="partner-background search-feedback-x" aria-label='Fermer' id="searchPopUpCloseX" onclick="hideSearchFeedbackPopup()">
+                <span aria-hidden="true">&#10006;</span>
+            </button>
+        </div>
+    </div>
+    <div id="search-feedback-form" style="color: #4d4d4d; padding: 15px; padding-top: 0;">
+        <div class="form-group gsc-font">
+            <label for="searchCommentsTextArea" style="margin-bottom: 5px; margin-top: 20px; max-width: 350px;" class="font-resize">Vous avez des commentaires? Veuillez nous laisser savoir comment nous pouvons am&#xE9;liorer notre centre de support!</label>
+            <textarea maxlength="400" class="gsc-border border-radius-0 font-resize" id="searchCommentsTextArea" rows="3"></textarea>
+            <label style="margin-bottom: 5px; margin-top: 5px; max-width: 400px; font-size: 0.8em;">
+                <span class="font-resize">
+                    ** Notez que vos suggestions seront utilis&#xE9;es afin d&#x2019;am&#xE9;liorer le centre de support. Nous ne r&#xE9;pondrons pas aux questions pos&#xE9;es dans la section des commentaires **
+                </span>
+            </label>
+            <div style="font-size: 0.9em; display:none;" id="search-max-character-limit-msg">
+                <button style="background: none; border: none; color: #00587E; padding: 0;" aria-label='[FR] Dismiss warning' class="font-resize" onclick="dismissSearchMaxCharLimitMsg()">
+                    <i class="far fa-times-circle" aria-hidden="true"></i>
+                </button>
+                <span class="font-resize">Vous avez atteint la limite maximale de caract&#xE8;res.</span>
+            </div>
+        </div>
+        <div style="display:flex; flex-direction: row; float:right;">
+            <button class="feedback-cancel-btn gsc-font" onclick="hideSearchFeedbackPopup()" id="searchFeedbackCancelBtn">
+                <span class="gsc-font font-resize" style="color: #4d4d4d;">Annuler</span>
+                <span style="color: #00587E; padding-left:5px;" aria-hidden="true">&#10006;</span>
+            </button>
+            <button class="feedback-submit-btn gsc-font" style="margin-left: 20px;" id="searchFeedbackSubmitBtn" onclick="submitSearchFeedback('aHR0cHM6Ly9lbS5nc2MtY29ycC5jYS9rbS1zZWFyY2gtc2VydmljZS9kZWZhdWx0L3NlYXJjaEZlZWRiYWNrP2V4ZWN1dGVkPTIwMjQtMDMtMDVUMTglM0EzNiUzQTAzLjQ3MFomcXVlcnk9JTJBJmNhdGVnb3J5PXZrbSUzQUFydGljbGVDYXRlZ29yeSZjYXRlZ29yeT12a20lM0FGQVFDYXRlZ29yeSZjYXRlZ29yeT12a20lM0FVcGxvYWRlZENhdGVnb3J5JmZlYXR1cmVkPXZrbSUzQU1hdGNoQW55JnRhZz1yZWdpb25fZmFxcyZib29rbWFya2VkPXZrbSUzQU1hdGNoQW55Jmxhbmc9ZnImb3JkZXJieT12a20lM0FyZWxldmFuY2Umb3JkZXJkaXJlY3Rpb249dmttJTNBSXRlbUxpc3RPcmRlckRlc2NlbmRpbmcmc2l6ZT01JnN0YXJ0PTEwMCZzcD0xJmVudGl0bGVtZW50cz0', '/SupportCentre')">
+                <span style="margin:0 10px;" class="font-resize">Soumettre</span>
+            </button>
+        </div>
+    </div>
+    <div id="search-feedback-success" style="display:none; flex-grow:1;">
+        <div style="position: absolute; top: 50%; margin-left:10px;" class="font-resize">
+            <span style="color: #85c943;"><i class="fas fa-check" aria-hidden="true"></i></span>
+            <span>Merci pour vos commentaires!</span>
+        </div>
+    </div>
+</div>
+
+                <div style="border-bottom: 1px dotted #999999; margin-top: 1rem;" class="gsc-font">
+                    <button class="text-left btn-document-title" value="aHR0cHM6Ly9lbS5nc2MtY29ycC5jYS9rbS1jb250ZW50LXNlcnZpY2UvZGVmYXVsdC9jb250ZW50L3ZrbSUzQUF1dGhvcmVkQ29udGVudC9wd3N2aTlPaWt1MjJVcFEwbGIwWVA3L2ZyLUZSP3ZlcnNpb249Mi4w" onClick="showDocumentDetail(this, '/SupportCentre')" style="background:none;border:none;">
+                        <h2 style="font-weight:normal;" class="doc-question-header">
+                            <span class="fas fa-chevron-right font-resize"></span>
+                            <span class="body-link font-resize">Comment puis-je mettre &#xE0; jour mes questions de s&#xE9;curit&#xE9;?</span>
+                        </h2>
+                    </button>
+                    <p style="color:#4d4d4d;overflow-wrap: break-word;word-break: break-word;" class="font-resize">Il est facile de changer vos questions de s&#xE9;curit&#xE9;. Il suffit de faire ce qui&#xA0;suit&#xA0;: Site&#xA0;Web&#xA0;: Connectez-vous &#xE0; votre compte et cliquez sur votre nom dans le coin sup&#xE9;rieur droit de la&#xA0;page. </p>
+                </div>
+                <div style="border-bottom: 1px dotted #999999; margin-top: 1rem;" class="gsc-font">
+                    <button class="text-left btn-document-title" value="aHR0cHM6Ly9lbS5nc2MtY29ycC5jYS9rbS1jb250ZW50LXNlcnZpY2UvZGVmYXVsdC9jb250ZW50L3ZrbSUzQUF1dGhvcmVkQ29udGVudC9hRTZjV0dBbkN4ODlCZzJuRTN1NWE3L2ZyLUZSP3ZlcnNpb249Mi4w" onClick="showDocumentDetail(this, '/SupportCentre')" style="background:none;border:none;">
+                        <h2 style="font-weight:normal;" class="doc-question-header">
+                            <span class="fas fa-chevron-right font-resize"></span>
+                            <span class="body-link font-resize">Pourquoi mon remboursement est-il r&#xE9;duit au co&#xFB;t du m&#xE9;dicament g&#xE9;n&#xE9;rique?</span>
+                        </h2>
+                    </button>
+                    <p style="color:#4d4d4d;overflow-wrap: break-word;word-break: break-word;" class="font-resize">Le remboursement de vos m&#xE9;dicaments d&#x2019;ordonnance a &#xE9;t&#xE9; r&#xE9;duit au co&#xFB;t du m&#xE9;dicament de&#xA0;substitution le moins cher. Selon votre r&#xE9;gime, le remboursement peut se limiter au co&#xFB;t du m&#xE9;dicament de </p>
+                </div>
+                <div style="border-bottom: 1px dotted #999999; margin-top: 1rem;" class="gsc-font">
+                    <button class="text-left btn-document-title" value="aHR0cHM6Ly9lbS5nc2MtY29ycC5jYS9rbS1jb250ZW50LXNlcnZpY2UvZGVmYXVsdC9jb250ZW50L3ZrbSUzQUF1dGhvcmVkQ29udGVudC9ZbXNaQzR1VmNOM05OeDJQNUdCeEY2L2ZyLUZSP3ZlcnNpb249Mi4w" onClick="showDocumentDetail(this, '/SupportCentre')" style="background:none;border:none;">
+                        <h2 style="font-weight:normal;" class="doc-question-header">
+                            <span class="fas fa-chevron-right font-resize"></span>
+                            <span class="body-link font-resize">Que sont les m&#xE9;dicaments biologiques et les m&#xE9;dicaments biosimilaires?</span>
+                        </h2>
+                    </button>
+                    <p style="color:#4d4d4d;overflow-wrap: break-word;word-break: break-word;" class="font-resize">Un m&#xE9;dicament biosimilaire est un m&#xE9;dicament biologique qui est commercialis&#xE9; apr&#xE8;s le m&#xE9;dicament d&#x2019;origine. &#xA0; Un m&#xE9;dicament biosimilaire est un m&#xE9;dicament approuv&#xE9; par Sant&#xE9;&#xA0;Canada qui offre aux </p>
+                </div>
+                <div style="border-bottom: 1px dotted #999999; margin-top: 1rem;" class="gsc-font">
+                    <button class="text-left btn-document-title" value="aHR0cHM6Ly9lbS5nc2MtY29ycC5jYS9rbS1jb250ZW50LXNlcnZpY2UvZGVmYXVsdC9jb250ZW50L3ZrbSUzQUF1dGhvcmVkQ29udGVudC9QWTFZY054V3B2MDljRUc2Tk9mM2I2L2ZyLUZSP3ZlcnNpb249Mi4w" onClick="showDocumentDetail(this, '/SupportCentre')" style="background:none;border:none;">
+                        <h2 style="font-weight:normal;" class="doc-question-header">
+                            <span class="fas fa-chevron-right font-resize"></span>
+                            <span class="body-link font-resize">Suis-je admissible &#xE0; une provision de vacances?</span>
+                        </h2>
+                    </button>
+                    <p style="color:#4d4d4d;overflow-wrap: break-word;word-break: break-word;" class="font-resize">La plupart des r&#xE9;gimes pr&#xE9;voient une provision de vacances de six mois (183&#xA0;jours) pour vos m&#xE9;dicaments. Veuillez informer votre pharmacie que vous partez en vacances afin qu&#x2019;elle puisse l&#x2019;indiquer </p>
+                </div>
+                <div style="border-bottom: 1px dotted #999999; margin-top: 1rem;" class="gsc-font">
+                    <button class="text-left btn-document-title" value="aHR0cHM6Ly9lbS5nc2MtY29ycC5jYS9rbS1jb250ZW50LXNlcnZpY2UvZGVmYXVsdC9jb250ZW50L3ZrbSUzQUF1dGhvcmVkQ29udGVudC92dXhUOGhtVjZ5OGFxNzZTV2V0OFA2L2ZyLUZSP3ZlcnNpb249Mi4w" onClick="showDocumentDetail(this, '/SupportCentre')" style="background:none;border:none;">
+                        <h2 style="font-weight:normal;" class="doc-question-header">
+                            <span class="fas fa-chevron-right font-resize"></span>
+                            <span class="body-link font-resize">PROTH&#xC8;SES AUDITIVES &#x2013; FAQ</span>
+                        </h2>
+                    </button>
+                    <p style="color:#4d4d4d;overflow-wrap: break-word;word-break: break-word;" class="font-resize">Pour v&#xE9;rifier si vous &#xEA;tes admissible, s&#xE9;lectionnez l&#x2019;option &#xAB;&#xA0;Suis-je couvert?&#xA0;&#xBB; dans le menu de gauche et suivez les &#xE9;tapes pour v&#xE9;rifier votre admissibilit&#xE9;. &#xA0; Poursuivez la lecture ci-dessous pour</p>
+                </div>
+            <div style="margin-top: 20px;">
+                <div class="float-right pagination-mobile">
+                    <!DOCTYPE html>
+<html>
+    <body>
+        <div class="row" style="margin:0;">
+            <ul class="pagination">
+                    <li class="page-item" data-toggle="tooltip" data-placement="bottom" title='Premier'>
+                        <a class="page-link btn-pagination" href="aHR0cHM6Ly9lbS5nc2MtY29ycC5jYS9rbS1zZWFyY2gtc2VydmljZS9kZWZhdWx0L3NlYXJjaD9jYXRlZ29yeT12a20lM0FBcnRpY2xlQ2F0ZWdvcnkmY2F0ZWdvcnk9dmttJTNBRkFRQ2F0ZWdvcnkmY2F0ZWdvcnk9-12" aria-label='Premier'>
+                            <span class="fas fa-chevron-left font-resize" aria-hidden="true"></span>
+                            <span class="fas fa-chevron-left font-resize" aria-hidden="true" style="margin-left:-8px;"></span>
+                        </a>
+                    </li>
+                    <li class="page-item" data-toggle="tooltip" data-placement="bottom" title='Pr&#xE9;c&#xE9;dent'>
+                        <a class="page-link btn-pagination" href="aHR0cHM6Ly9lbS5nc2MtY29ycC5jYS9rbS1zZWFyY2gtc2VydmljZS9kZWZhdWx0L3NlYXJjaD9jYXRlZ29yeT12a20lM0FBcnRpY2xlQ2F0ZWdvcnkmY2F0ZWdvcnk9dmttJTNBRkFRQ2F0ZWdvcnkmY2F0ZWdvcnk9-52" aria-label='Pr&#xE9;c&#xE9;dent'>
+                            <span class="fas fa-chevron-left font-resize" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li class="page-item" data-toggle="tooltip" data-placement="bottom" title='Suivant'>
+                        <a class="page-link btn-pagination" href="aHR0cHM6Ly9lbS5nc2MtY29ycC5jYS9rbS1zZWFyY2gtc2VydmljZS9kZWZhdWx0L3NlYXJjaD9jYXRlZ29yeT12a20lM0FBcnRpY2xlQ2F0ZWdvcnkmY2F0ZWdvcnk9dmttJTNBRkFRQ2F0ZWdvcnkmY2F0ZWdvcnk9-42" aria-label='Suivant'>
+                            <span class="fas fa-chevron-right font-resize" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li class="page-item" data-toggle="tooltip" data-placement="bottom" title='Dernier'>
+                        <a class="page-link btn-pagination" href="aHR0cHM6Ly9lbS5nc2MtY29ycC5jYS9rbS1zZWFyY2gtc2VydmljZS9kZWZhdWx0L3NlYXJjaD9jYXRlZ29yeT12a20lM0FBcnRpY2xlQ2F0ZWdvcnkmY2F0ZWdvcnk9dmttJTNBRkFRQ2F0ZWdvcnkmY2F0ZWdvcnk9-14" aria-label='Dernier'>
+                            <span class="fas fa-chevron-right font-resize" aria-hidden="true"></span>
+                            <span class="fas fa-chevron-right font-resize" style="margin-left:-8px;" aria-hidden="true"></span>
+                        </a>
+                    </li>
+
+            </ul>
+        </div>
+    </body>
+
+
+<!-- Mirrored from support.greenshield.ca/SupportCentre/greenshield/Home/DocumentsByPage/aHR0cHM6Ly9lbS5nc2MtY29ycC5jYS9rbS1zZWFyY2gtc2VydmljZS9kZWZhdWx0L3NlYXJjaD9jYXRlZ29yeT12a20lM0FBcnRpY2xlQ2F0ZWdvcnkmY2F0ZWdvcnk9dmttJTNBRkFRQ2F0ZWdvcnkmY2F0ZWdvcnk9dmttJTNBVXBsb2FkZWRDYXRlZ29yeSZ0YWc9cmVnaW9uX2ZhcXMmbGFuZz1mciZzaXplPTUmc3RhcnQ9MTAw by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Mar 2024 18:43:29 GMT -->
+</html>
+                </div>
+            </div>
+    </div>
+
+    <div id="document-detail" style="display:none;height:100%;">
+        <button class="gsc-font feedback-btn content-feedback-btn partner-background" id="feedbackBtn" onclick="showFeedbackPopup()">
+            <div>
+                <span style="padding: 0 15px;" class="text-uppercase font-resize">Commentaires</span>
+            </div>
+        </button>
+        <div id="feedback-popup" class="feedback-popup" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="lbl-document-feedback">
+
+            <div id="content-form-spinner-container-parent" class="form-spinner-container-parent" style="display:none;">
+                <div class="form-spinner-container">
+                    <div class="form-spinner form-spinner-1"></div>
+                </div>
+                <div class="visually_hidden" aria-live="polite"><span>T&#xE9;l&#xE9;chargement en cours</span></div>
+            </div>
+
+            <div style="border-bottom: 1px solid #787878; display:flex; background: #85c943; padding-left:15px;" class="align-text-center partner-background">
+                <div style="flex-grow:1;">
+                    <h2 class="text-uppercase partner-color" id="lbl-document-feedback">
+                        <span class="font-resize partner-feedback-header">Content Feedback [FR]</span>
+                    </h2>
+                </div>
+                <div style="background:#85c943;">
+                    <button class="search-feedback-x partner-background" aria-label='Fermer' onclick="hideFeedbackPopup()" id="feedback-x">
+                        <span aria-hidden="true">&#10006;</span>
+                    </button>
+                </div>
+            </div>
+            <div id="feedback-form" style="color: #4d4d4d; padding: 15px;" class="gsc-font">
+                <div class="font-resize feedback-code-options">
+                    <div>
+                        <span>Avez-vous trouv&#xE9; le contenu utile?</span>
+                    </div>
+                    <div id="feedbackCodeOptions" style="padding-top: 5px;">
+                    </div>
+                </div>
+                <div class="gsc-font form-group font-resize" style="margin-top: 5px;">
+                    <label for="commentsTextArea" style="margin-bottom:0;">S&#x2019;il vous plait, nous indiquer pourquoi</label>
+                    <textarea maxlength="400" class="gsc-border border-radius-0 font-resize" id="commentsTextArea" rows="3"></textarea>
+                    <div style="font-size: 0.9em; display:none;" id="max-character-limit-msg">
+                        <button style="background: none; border: none; color: #00587E; padding: 0;" onclick="dismissMaxCharLimitMsg()" aria-label='[FR] Dismiss warning'>
+                            <i class="far fa-times-circle" aria-hidden="true"></i>
+                        </button>
+                        <span>Vous avez atteint la limite maximale de caract&#xE8;res.</span>
+                    </div>
+                </div>
+                <div style="display:flex; flex-direction: row; float:right;">
+                    <button class="feedback-cancel-btn" onclick="hideFeedbackPopup()">
+                        <span class="gsc-font font-resize" style="color: #4d4d4d;">Annuler</span>
+                        <span style="color: #00587E; padding-left:5px;" aria-hidden="true">&#10006;</span>
+                    </button>
+                    <button class="feedback-submit-btn" style="margin-left: 20px;" id="feedbackSubmitBtn" tabindex="-1" onclick="submitFeedback('/SupportCentre')">
+                        <span style="margin:0 10px;" class="font-resize">Soumettre</span>
+                    </button>
+                </div>
+            </div>
+            <div id="feedback-success" style="display:none; flex-grow:1;">
+                <div style="position: absolute; top: 50%; margin-left: 10px;">
+                    <span style="color: #85c943;">
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                    </span>
+                    <span>Merci pour vos commentaires!</span>
+                </div>
+            </div>
+        </div>
+        <div style="border:1px solid #949494;" class="document-detail-inner">
+            <div class="justify-content-md-start" style="height:calc(100% - 50px)">
+                <div style="border-bottom: 1px solid #949494; margin-bottom:15px; display:flex;">
+                    <div class="row" style="margin:0;width:100%;">
+                        <div class="col mr-auto" style="margin:auto 0; padding:0; padding-right: 15px;" id="document-header-container">
+                        </div>
+                        <div class="col-auto" style="margin:0; padding:0;">
+                            <button class="btn-content-close" aria-label='Fermer' onClick="hideDocumentDetail()" style="padding: 0;">
+                                <span aria-hidden="true">&#10006;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <p style="color: #4d4d4d; height:100%;" class="gsc-font document-content">
+                    <span id="document-content" class="font-resize"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="contentinfo">
+                    <div class="support-centre-footer">
+    <nav class="inner-container" style="padding:20px 0;height:100%">
+        <div class="footer-lg">
+            <div class="col-2 footer-col-border">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link navbar-brand footer-link gsc-font" href=../../../../../www.greenshield.ca/fr-ca/confidentialite.html target="_blank">
+                            <span class="font-resize wrap-words"> Confidentialit&#xE9; </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link navbar-brand footer-link gsc-font" href=../../../../../www.greenshield.ca/fr-ca/securite.html target="_blank">
+                                <span class="font-resize wrap-words"> S&#xE9;curit&#xE9; </span>
+                            </a>
+
+                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbar-brand footer-link gsc-font" href=../../../../../www.greenshield.ca/fr-ca/accessibilite.html target="_blank">
+                                <span class="font-resize wrap-words">Accessibilit&#xE9; </span>
+                            </a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-brand footer-link gsc-font" href=../../../../../www.greenshield.ca/fr-ca/avis-juridiques.html target="_blank">
+                            <span class="font-resize wrap-words"> Avis juridiques </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-2 footer-col-border">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link navbar-brand footer-link gsc-font" href=../../../../../onlineservices.greenshield.ca/planmember/Common/ContactSupport8517.html?lang=fr-CA&amp;EnableCorpInquiry=true target="_blank">
+                            <span class="font-resize wrap-words">  Contactez-nous </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-8">
+                <p class="navbar-brand footer-link gsc-font copyright-text"><span class="font-resize"> Tous droits r&#xE9;serv&#xE9;s &#xA9; 2024 Green Shield Canada</span></p>
+                    <div class="disclaimer disclaimer-brand">
+                        <span class="font-resize">
+                            Green Shield Canada s&#x27;est engag&#xE9;e &#xE0; adopter l&#x27;inclusivit&#xE9; et &#xE0; fournir des renseignements et des communications accessibles. S&#x27;il vous faut un format accessible ou des auxiliaires de communication aux fins d&#x27;utilisation du pr&#xE9;sent site, ou pour tout commentaire sur la fa&#xE7;on de rendre le pr&#xE9;sent site plus accessible aux personnes handicap&#xE9;es, veuillez 
+                        </span>
+                        <span>
+                            <a class="disclaimer_link font-resize" href=../../../../../onlineservices.greenshield.ca/planmember/Common/ContactSupport8517.html?lang=fr-CA&amp;EnableCorpInquiry=true target="_blank">cliquer ici</a>
+                        </span>
+                        <span class="font-resize">
+                             ou communiquer au 
+                        </span>
+                        <span>
+                            <a class="disclaimer_link font-resize" href=mailto:customer.service@greenshield.ca>customer.service@greenshield.ca.</a>
+                        </span>
+                    </div>
+            </div>
+        </div>
+        <div class="footer-sm">
+            <div class="col-6 footer-col-border">
+                <ul class="navbar-nav">
+                    <li class="nav-item"> <a class="nav-link navbar-brand footer-link gsc-font" href=../../../../../www.greenshield.ca/fr-ca/confidentialite.html target="_blank"> Confidentialit&#xE9; </a></li>
+                    <li class="nav-item"> <a class="nav-link navbar-brand footer-link gsc-font" href=../../../../../www.greenshield.ca/fr-ca/securite.html target="_blank"> S&#xE9;curit&#xE9; </a></li>
+                        <li class="nav-item"> <a class="nav-link navbar-brand footer-link gsc-font" href=../../../../../www.greenshield.ca/fr-ca/accessibilite.html target="_blank"> <span class="font-resize">Accessibilit&#xE9; </span></a></li>
+                    <li class="nav-item"> <a class="nav-link navbar-brand footer-link gsc-font" href=../../../../../www.greenshield.ca/fr-ca/avis-juridiques.html target="_blank"> Avis juridiques </a></li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <ul class="navbar-nav">
+                    <li class="nav-item"> <a class="nav-link navbar-brand footer-link gsc-font" href=../../../../../onlineservices.greenshield.ca/planmember/Common/ContactSupport8517.html?lang=fr-CA&amp;EnableCorpInquiry=true target="_blank">  Contactez-nous </a></li>
+                    <li class="footer-link gsc-font line-height-1 copyright-text" style="display:none;"> Tous droits r&#xE9;serv&#xE9;s &#xA9;</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../../../lib/jquery/jquery-3.6.0.html"></script>
+        <script src="../../../lib/popper/popper6322.html?v=9Qq7ceWGtvC0vrxl_iBa52WWy5tdlwdyq2HDpuf-UZg"></script>
+        <script src="../../../lib/bootstrap/js/bootstrap6b60.html?v=LKpkBN2w3iudGRseLItcNcaMpI8qlSEUC7-DsnwGNwA"></script>
+        <script src="../../../common/js/commona6f2.html?v=85yke028Qj6lZucUyCrbTFqHMrG10dD-AAzoGJ50fHg"></script>
+    </div>
+    <!--Error Modal-->
+    <div class="modal fade" id="error-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="z-index:20000;">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content border-radius-0 gsc-border gsc-box-shadow" style="padding:5px 20px;">
+                <div class="modal-header" style="padding:15px 2px; border-bottom: 2px solid red; ">
+                    <span class="error-dialog-icon align-text-center">
+                        <i class="fas fa-exclamation" aria-hidden="true"></i>
+                    </span>
+                    <h2 style="transform: translateY(50%)">
+                        <span class="align-text-center gsc-font-color" style="margin-left:20px;">
+                            <span class="font-resize">Erreur</span>
+                        </span>
+                    </h2>
+                    <div style="position:relative;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label='Fermer' style="display:inline-block">
+                            <i class="fas fa-times align-middle" style="font-size:35px;" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body gsc-font gsc-font-color" style="padding-left: 0; padding-right: 0;">
+                    <span class="font-resize">Malheureusement, un probl&#xE8;me est survenu. Veuillez r&#xE9;essayer plus tard.</span>
+                </div>
+                <div class="modal-footer no-border" style="padding-right: 0;">
+                    <button type="button" class="btn modal-btn gsc-border gsc-font align-text-center border-radius-0" data-dismiss="modal">
+                        <span class="font-resize">Fermer</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Security Modal-->
+    <div class="modal fade" id="security-modal" tabindex="-1" role="dialog" aria-hidden="true" style="z-index:20000;">
+        <div class="modal-dialog modal-dialog-centered security-modal-dialog" role="document">
+            <div class="modal-content border-radius-0 gsc-border gsc-box-shadow" style="padding:5px 20px;">
+                <div class="modal-header" style="padding:15px 2px; border-bottom: 2px solid #414042; ">
+                    <span class="error-dialog-icon align-text-center" style="visibility: hidden;">
+                        <i class="fas fa-exclamation" aria-hidden="true"></i>
+                    </span>
+                    <h2 style="transform: translateY(50%); font-size: 20px;">
+                        <span class="align-text-center gsc-font-color">
+                            <span class="font-resize">S&#xE9;curit&#xE9;</span>
+                        </span>
+                    </h2>
+                    <div style="position:relative;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label='Fermer' style="display:inline-block">
+                            <i class="fas fa-times align-middle" style="font-size:35px;" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body gsc-font gsc-font-color" style="padding-left: 0; padding-right: 0;">
+                    
+<div class="container gsc-font gsc-font-color">
+    <div class="security-modal-content font-resize">
+        <p>
+            L’expansion rapide des communications électroniques a engendré une révolution au niveau de notre façon de travailler et de vous fournir des services. La sécurité de l’information se situe au cœur de la conduite de nos affaires, et il s’agit d’une responsabilité assumée par chaque employé(e). Il en est question dans notre entente relative à l’embauche et, régulièrement, des rappels écrits en confirment la validité.
+        </p>
+        <p>
+            Peu importe que vous accédiez à nos services en direct, par téléphone ou en personne, nous souscrivons à des procédures de sécurité rigoureuses et faisons appel à des technologies de pointe pour protéger vos renseignements personnels et vos transactions contre tout accès, divulgation, modification et mauvais usage non autorisé.
+        </p>
+        <p>
+            La sécurité de l’information vise à protéger les renseignements, les systèmes d’information et les modes de communication, utilisés pour la communication des renseignements, contre tout danger découlant d’un bris de confidentialité, d’intégrité et de disponibilité. Voici les principes-clés pris en considération au niveau de nos processus de sécurité :
+        </p>
+        <ol>
+            <li>
+                L’imputabilité : chaque personne qui utilise nos systèmes d’information assume la responsabilité de les protéger et elle sera imputable de l’utilisation qui sera faite de ces systèmes;
+            </li>
+            <li>
+                La sensibilisation : chaque personne qui utilise nos systèmes d’information doit être sensibilisée aux initiatives pouvant être prises pour contrer les dangers et raffermir la sécurité;
+            </li>
+            <li>
+                L’aspect multidisciplinaire : il faut s’attaquer à la sécurité en prenant en considération à la fois les enjeux technologiques et non technologiques;
+            </li>
+            <li>
+                L’intégration : la sécurité doit être assujettie à des mesures de coordonnée et intégrée;
+            </li>
+            <li>
+                La réévaluation : la sécurité se doit régulièrement d’être réévaluée;
+            </li>
+            <li>
+                La rapidité d’exécution : les procédures de sécurité doivent permettre la surveillance et une réaction rapide;
+            </li>
+            <li>
+                Les facteurs sociétaux : il faut promouvoir des fondements moraux en respectant les droits et les intérêts des autres.
+            </li>
+        </ol>
+        <p>
+            Bien que nous fassions tout notre possible pour garantir la sécurité et la confidentialité, vous pouvez, de votre côté, prendre des mesures pour accroître votre niveau de sécurité lorsque vous utilisez l’Internet et que vous faites des transactions en direct.
+        </p>
+        <h3 class="gsc-font-color">
+            <span class="font-resize">La sécurité dans notre réseau</span>
+        </h3>
+        <h4 class="gsc-font-color">
+            <span class="font-resize">Le cryptage</span>
+        </h4>
+        <p>
+            Grâce au cryptage, de nombreux sites Internet se trouvent sécurisés. Le cryptage ou chiffrement permet d’encoder les renseignements qui circulent entre votre ordinateur et notre système informatique, les protégeant ainsi contre toute interception, visualisation et altération non autorisées.
+        </p>
+        <p>
+            La transmission des pages Web sur notre site Internet, qui maintient et affiche vos renseignements personnels, est sécurisée au moyen d’un cryptage des données. De plus, les renseignements personnels, qui nous ont été envoyés par ces pages Web, sont également sécurisés.
+        </p>
+        <p>
+            Nos sites permettent uniquement un chiffrement à 128 bits au moins. Ils ont été testés dans leur intégralité et fonctionnent avec les deux plus récentes versions des navigateurs ci-après :
+        </p>
+        <ul>
+            <li>Microsoft Internet Explorer</li>
+            <li>Google Chrome</li>
+            <li>Apple Safari</li>
+        </ul>
+        <p>
+            Nous vous recommandons d’utiliser la version la plus à jour de votre navigateur dont tous les correctifs de sécurité applicables ont été installés.
+        </p>
+        <h4 class="gsc-font-color">
+            <span class="font-resize">
+                Identificateurs de connexion et mots de passe
+            </span>
+        </h4>
+        <p>
+            Les identificateurs de connexion et les mots de passe sont utilisés par les systèmes informatiques et les sites Internet pour s’assurer de votre identité. Grâce à un identificateur de connexion et à un mot de passe, vous pouvez accéder à des services et à des renseignements précis pour votre utilisation personnelle. Quiconque possède votre identificateur de connexion et votre mot de passe peut aussi accéder à vos renseignements.
+        </p>
+        <p>
+            Votre identificateur de connexion et votre mot de passe ne seront pas sauvegardés et vous devez les entrer de nouveau chaque fois que vous vous connectez à une page de service en ligne sécurisée.
+        </p>
+        <h4 class="gsc-font-color">
+            <span class="font-resize">Conseils utiles pour la création de mots de passe uniques</span>
+        </h4>
+        <ul>
+            <li>
+                Ne partagez jamais vos mots de passe avec qui que ce soit, y compris des membres de votre famille.
+            </li>
+            <li>
+                Utilisez toujours des mots de passe qui ne faciliteront pas les choses aux autres. Par exemple, dans des mots de passe, évitez d’utiliser votre nom, celui de membres de votre famille, votre adresse ou tout autre renseignement pouvant facilement être trouvé dans votre sac à main ou votre portefeuille advenant qu’il soit perdu ou volé.
+            </li>
+            <li>
+                Évitez le recours à des mots de passe courts, car, aux yeux des autres, ils seront plus faciles à deviner. Plus le mot de passe sera long, plus vous rendrez la tâche difficile aux autres. Nombreux sont les fournisseurs de services offerts sur l’Internet qui instaurent des normes ayant pour but de définir et de forcer l’utilisation de mots de passe comportant une longueur minimale. Nous possédons des normes régissant la longueur minimale des mots de passe. Nos normes relatives aux identificateurs d’utilisateur et aux mots de passe peuvent être consultées en direct sur notre site Web par l’entremise de la fonction d’aide.
+            </li>
+            <li>
+                Lorsque cela est possible, évitez d’utiliser le même mot de passe pour plusieurs applications ou services sur Internet. Cette règle est particulièrement importante pour toute application sur Internet dans le cadre de laquelle s’effectue un accès à vos renseignements personnels ou financiers.
+            </li>
+            <li>
+                Changez souvent de mot de passe.
+            </li>
+        </ul>
+        <h4 class="gsc-font-color">
+            <span class="font-resize">
+                Témoins (ou « cookies »)
+            </span>
+        </h4>
+        <p>
+            Les témoins (ou « cookies ») sont utilisés pour le maintien de la sécurité au cours d’une session, car ils en assurent l’unicité et autorisent son déroulement entre votre ordinateur et nos systèmes sur Internet.
+        </p>
+        <p>
+            Nous NE nous servons PAS des témoins aux fins suivantes :
+        </p>
+        <ul>
+            <li>
+                Les témoins ne sont pas utilisés pour « espionner » la navigation sur Internet des visiteurs, une fois que ceux-ci/celles-ci ont quitté nos sites Web; en plus, les renseignements de contrôle qui pourraient être recueillis au cours d’une visite sur un de nos sites Web ne seront pas utilisés à des fins promotionnelles;
+            </li>
+            <li>
+                Pour plus de sécurité, les témoins ne sont pas utilisés pour mémoriser des noms-utilisateurs et des mots de passe; chaque fois que vous demandez une connexion en direct à une page de service sécurisée, vous devrez fournir ce renseignement;
+            </li>
+            <li>
+                Nous n’établissons aucun rapport entre tout renseignement recueilli grâce aux témoins et des renseignements personnels ou financiers vous appartenant.
+            </li>
+        </ul>
+        <h4 class="gsc-font-color">
+            <span class="font-resize">
+                Commentaires, questions ou réponses formulés par courriel
+            </span>
+        </h4>
+        <p>
+            Lorsque vous nous envoyez un courriel ou nous demandez de vous répondre par courriel, nous obtenons votre adresse électronique exacte et tout renseignement joint au courrier électronique. Nous utilisons votre adresse électronique pour accuser réception de vos commentaires et/ou pour répondre à vos questions, et nous conserverons le contenu de votre communication et notre réponse aussi longtemps que l’exigent les lois et les règlements appropriés et nos pratiques commerciales. Nous ne vous enverrons jamais un courriel vous demandant vos mots de passe et nous ne révélerons votre adresse électronique à personne.
+        </p>
+        <p>
+            Certains courriels reçus ou envoyés sur Internet ne sont pas sûrs et nous vous recommandons de faire preuve de prudence au moment de nous faire parvenir des messages par courriel.
+        </p>
+        <p>
+            Si vous avez des questions quelconques concernant l’authenticité ou la sécurité d’un courriel que vous auriez reçu de notre part, veuillez ne pas hésiter à communiquer avec nous au 1-833-318-2811.
+        </p>
+    </div>
+</div>
+                </div>
+                <div class="modal-footer no-border" style="padding-right: 0;">
+                    <button type="button" class="btn modal-btn gsc-border gsc-font align-text-center border-radius-0" data-dismiss="modal">
+                        <span class="font-resize">Fermer</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

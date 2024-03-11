@@ -1,0 +1,8 @@
+-%L ../urls.txt -O . +*greenshield.ca/* https://www.greenshield.ca/green-door-project -O . -iC2
+File generated automatically on Tue, 05 Mar 2024 18:39:28, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+
